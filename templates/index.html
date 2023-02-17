@@ -10,8 +10,16 @@
         <meta name="author" content="Maggie Hunt">
     </head>
     <body>
+        <form id="nameForm" action="/" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="name">What is your name?</label>
+              <input type="text" step="any" id="name" name="name" placeholder="" required>
+                          
+            </div>
 
-        <p id="content">{{console_content}}</p>
+            </form>
+
+        <p id="content">Hi {{username}}</p>
 
         </body>
         <script src="../static/js/script.js"></script>

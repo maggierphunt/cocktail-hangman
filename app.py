@@ -5,11 +5,16 @@ import os
 app = Flask("cocktail-hangman") #making an app
 
 #Homepage
-@app.route("/")  
+@app.route("/", methods=["POST", "GET"])   
 def landing_page():
-    name = input("What is your name? ")
+    return render_template("index.html")
 
-    print ("Hello, " + name, "Time to play hangman!")
+def input():
+    
+    form_data = request.form
+    username = form_data['name']
+
+    print ("Hello, " + username, ", Time to play hangman!")
 
     #wait for 1 second
     time.sleep(1)
@@ -78,7 +83,7 @@ def landing_page():
             # print "You Lose"
                 print ("You Lose"  )
 
-    return render_template("index.html", name=name)
+    return render_template("index.html", username=username)
 
 
 # @app.route("/success")  
