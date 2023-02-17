@@ -19,7 +19,10 @@
 
             </form>
 
+        {%if username="" %}
+        {%else%}
         <p id="content">Hi {{username}}</p>
+        {% endif %}
 
         </body>
         <script src="../static/js/script.js"></script>

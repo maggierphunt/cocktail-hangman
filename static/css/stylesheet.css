@@ -5,3 +5,11 @@ body {
     margin: 10%;
     font-size: 32pt;
 }
+
+input {
+    font-size: 32pt;
+    background-color: #1d1d1d;
+    color: lime;
+    position: inline;
+    font-family: 'Courier New', Courier, monospace;
+}
